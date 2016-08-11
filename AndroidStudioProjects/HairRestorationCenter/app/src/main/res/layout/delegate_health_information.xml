@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#13434D">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#F0F4F5"
+                android:text="Personal/Health Information"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#F0F4F5"
+                    android:padding="10dp"
+                    android:text="Age"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#F0F4F5"
+                    android:padding="10dp"
+                    android:text="Gender"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/gender"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#F0F4F5"
+                android:padding="1dp"
+                android:text="please list any existing medical condition"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_bg"
+                android:drawablePadding="9dp"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#F0F4F5"
+                android:padding="1dp"
+                android:text="*Any family history of baldness or thinning hair."
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_bg"
+                android:drawablePadding="9dp"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#F0F4F5"
+                android:padding="1dp"
+                android:text="*Did baldness or tinning hair come about rather suddenly?(required)."
+                android:textSize="15dp"/>
+
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_bg"
+                android:drawablePadding="9dp"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#F0F4F5"
+                android:padding="1dp"
+                android:text="*What is your time frame to proceed."
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_bg"
+                android:drawablePadding="9dp"
+                android:enabled="false"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#05262F"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:text="Register" />
+</RelativeLayout>
