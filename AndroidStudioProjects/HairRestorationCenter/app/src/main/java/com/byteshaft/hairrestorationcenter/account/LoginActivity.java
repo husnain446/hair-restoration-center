@@ -131,6 +131,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     AppGlobals.alertDialog(LoginActivity.this, "Login Failed!", "Invalid Email or Password" );
 
                 }else if (jsonObject.getString("Message").equals("Successfully")) {
+                    JSONObject details = jsonObject.getJSONObject("details");
+                    System.out.println(jsonObject + "working");
+                    String username = details.getString(AppGlobals.KEY_USER_NAME);
+                    String userId = details.getString(AppGlobals.KEY_USER_ID);
+                    String firstName = details.getString(AppGlobals.KEY_FIRSTNAME);
+                    String lastName = details.getString(AppGlobals.KEY_LASTNAME);
+                    String email = details.getString(AppGlobals.KEY_EMAIL);
+                    String phoneNumber = details.getString(AppGlobals.KEY_PHONE_NUMBER);
+                    String zipCode = details.getString(AppGlobals.KEY_ZIP_CODE);
+
+                    //saving values
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_FIRSTNAME, firstName);
+                    Log.i("First name", " " + AppGlobals.getStringFromSharedPreferences(AppGlobals.KEY_FIRSTNAME));
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_LASTNAME, lastName);
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_EMAIL, email);
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_PHONE_NUMBER, phoneNumber);
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_ZIP_CODE, zipCode);
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_USER_ID, userId);
+                    AppGlobals.saveDataToSharedPreferences(AppGlobals.KEY_USER_NAME, username);
                     Toast.makeText(LoginActivity.this, "Log In Successful", Toast.LENGTH_SHORT).show();
                     AppGlobals.saveUserLogin(true);
                     finish();

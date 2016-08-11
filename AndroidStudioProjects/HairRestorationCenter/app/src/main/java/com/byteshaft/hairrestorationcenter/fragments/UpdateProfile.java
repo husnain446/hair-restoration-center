@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.byteshaft.hairrestorationcenter.MainActivity;
 import com.byteshaft.hairrestorationcenter.R;
 import com.byteshaft.hairrestorationcenter.utils.AppGlobals;
 import com.byteshaft.hairrestorationcenter.utils.WebServiceHelpers;
@@ -110,10 +111,9 @@ public class UpdateProfile extends Fragment {
                     AppGlobals.alertDialog(getActivity(), "Registration Failed!", "username or email already exits");
 
                 } else if (jsonObject.getString("Message").equals("Successfully")) {
-                    JSONObject details = jsonObject.getJSONObject("details");
                     System.out.println(jsonObject + "working");
                     getActivity().finish();
-                    startActivity(new Intent(AppGlobals.getContext(), EducationFragment.class));
+                    startActivity(new Intent(AppGlobals.getContext(), MainActivity.class));
                     Toast.makeText(getActivity(), "Account Created Successfully", Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
